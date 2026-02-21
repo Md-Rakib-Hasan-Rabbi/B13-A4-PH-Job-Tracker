@@ -1,38 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Application Tracker</title>
     <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet" />
 
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+    <!-- icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="w-11/12 mx-auto">
+<body class="w-10/12 mx-auto">
     <section class="mt-[60px]">
-       <h1 class="font-bold text-2xl">Job Application Tracker</h1>
-       <div class="flex gap-4 mt-4">
-        <div class="bg-gray-200 p-4 rounded w-1/3">
-            <p>Total</p>
-            <p>0</p>
+        <h1 class="font-bold text-2xl">Job Application Tracker</h1>
+        <div class="flex gap-4 mt-4">
+            <div class="bg-gray-200 p-4 rounded-lg w-1/3">
+                <p>Total</p>
+                <p>8</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-lg w-1/3">
+                <p>Interview</p>
+                <p class="text-green-500">0</p>
+            </div>
+            <div class="bg-gray-200 p-4 rounded-lg w-1/3">
+                <p>Rejected</p>
+                <p class="text-red-500">0</p>
+            </div>
         </div>
-        <div class="bg-gray-200 p-4 rounded w-1/3">
-            <p>Interview</p>
-            <p class="text-green-500">0</p>
-        </div>
-        <div class="bg-gray-200 p-4 rounded w-1/3">
-            <p>Rejected</p>
-            <p class="text-red-500">0</p>
-        </div>
-       </div>
-        
     </section>
 
-    <section></section>
+    <section class="mx-auto mt-[30px]">
+        <div class="flex gap-4 justify-between">
+            <div>
+                <h3 class="font-bold">Available Jobs</h3>
+            </div>
+            <div>
+                <p class="text-gray-600">8 Jobs</p>
+            </div>
+        </div>
+
+        <div class="mt-[24px]">
+            <button class="btn btn-primary w-[80px] h-[32px]">All</button>
+            <button class="btn btn-soft w-[80px] h-[32px]">Interview</button>
+            <button class="btn btn-soft w-[80px] h-[32px]">Rejected</button>
+        </div>
+        <!-- card--1  -->
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">Mobile First Corp</h3>
+                        <p class="text-gray-500">React Native Developer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">Remote • Full-time • $130,000 - $175,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Build cross-platform mobile applications using React Native. Work on
+                    products used by millions of users worldwide.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+        <!-- card --2  -->
+
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">WebFlow Agency</h3>
+                        <p class="text-gray-500">Web Designer & Developer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Create stunning web experiences for high-profile clients. Must have portfolio and experience with
+                    modern web design trends.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+        <!-- card--3  -->
+
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">DataViz Solutions</h3>
+                        <p class="text-gray-500">Data Visualization Specialist</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">Boston, MA
+                    •
+                    Full-time
+                    •
+                    $125,000 - $165,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong
+                    analytical thinking.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+        <!-- card--4  -->
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">CloudFirst Inc</h3>
+                        <p class="text-gray-500">Backend Developer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">Seattle, WA
+                    •
+                    Full-time
+                    •
+                    $140,000 - $190,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices
+                    and cloud infrastructure.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+        <!-- card --5  -->
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">Innovation Labs</h3>
+                        <p class="text-gray-500">UI/UX Engineer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">Austin, TX
+                    •
+                    Full-time
+                    •
+                    $110,000 - $150,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Create beautiful and functional user interfaces for our suite of products. Strong design skills and
+                    frontend development expertise required.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- card--6 -->
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">MegaCorp Solutions</h3>
+                        <p class="text-gray-500">JavaScript Developer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">New York, NY
+                    •
+                    Full-time
+                    •
+                    $130,000 - $170,00</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Build enterprise applications with JavaScript and modern frameworks. We offer competitive
+                    compensation, health insurance, and professional development opportunities.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+        <!-- card--7  -->
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">StartupXYZ</h3>
+                        <p class="text-gray-500">Full Stack Engineer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">Remote
+                    •
+                    Full-time
+                    •
+                    $120,000 - $160,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                    Join our fast-growing startup and work on our core platform. Experience with Node.js and React
+                    required. Great benefits and equity package included.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+        <!-- card--8 -->
+        <div>
+            <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
+                <div class="flex justify-between">
+                    <div>
+                        <h3 class="font-semibold text-lg">TechCorp Industries</h3>
+                        <p class="text-gray-500">Senior Frontend Developer</p><br>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <p class="text-gray-500">San Francisco, CA
+                    •
+                    Full-time
+                    •
+                    $130,000 - $175,000</p>
+                <br />
+                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+
+                <p class="text-gray-600">
+                   We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+                </p>
+                <br />
+                <div>
+                    <button class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button class="btn btn-outline btn-error">REJECTED</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
 
 </html>
