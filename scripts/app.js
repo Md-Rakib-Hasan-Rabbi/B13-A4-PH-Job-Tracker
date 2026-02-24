@@ -29,3 +29,28 @@ for (let i = 1; i <= 8; i++) {
     document.getElementById(`rejected_${i}`)
         .addEventListener("click", () => markRejected(i));
 }
+
+const cards = document.querySelectorAll(".card");
+
+for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const statusBtn = card.querySelector(".status-btn");
+    const interviewBtn = card.querySelector(".interview-btn");
+    const rejectedBtn = card.querySelector(".rejected-btn");
+
+    if (interviewBtn) {
+        interviewBtn.onclick = function() {
+            card.dataset.status = "Interview";
+            statusBtn.innerText = "Interview";
+            statusBtn.className = "status-btn btn btn-success text-white";
+        }
+    }
+
+    if (rejectedBtn) {
+        rejectedBtn.onclick = function() {
+            card.dataset.status = "Rejected";
+            statusBtn.innerText = "Rejected";
+            statusBtn.className = "status-btn btn btn-error text-white";
+        }
+    }
+}
