@@ -33,15 +33,15 @@
         <div class="flex gap-4 mt-4">
             <div class="bg-gray-200 p-4 rounded-lg w-1/3">
                 <p>Total</p>
-                <p>8</p>
+                <p id="total_jobs">8</p>
             </div>
             <div class="bg-gray-200 p-4 rounded-lg w-1/3">
                 <p>Interview</p>
-                <p class="text-green-500">0</p>
+                <p id="interview_count" class="text-green-500">0</p>
             </div>
             <div class="bg-gray-200 p-4 rounded-lg w-1/3">
                 <p>Rejected</p>
-                <p class="text-red-500">0</p>
+                <p id="rejected_count" class="text-red-500">0</p>
             </div>
         </div>
     </section>
@@ -75,7 +75,7 @@
                 </div>
                 <p class="text-gray-500">Remote • Full-time • $130,000 - $175,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_1" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Build cross-platform mobile applications using React Native. Work on
@@ -83,8 +83,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_1" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_1" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
                 </div>
                 <p class="text-gray-500">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_2" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Create stunning web experiences for high-profile clients. Must have portfolio and experience with
@@ -111,8 +111,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_2" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_2" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@
                     •
                     $125,000 - $165,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_3" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong
@@ -143,8 +143,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_3" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_3" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -166,7 +166,7 @@
                     •
                     $140,000 - $190,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_4" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices
@@ -174,8 +174,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_4" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_4" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -197,7 +197,7 @@
                     •
                     $110,000 - $150,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_5" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Create beautiful and functional user interfaces for our suite of products. Strong design skills and
@@ -205,8 +205,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_5" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_5" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -227,9 +227,9 @@
                     •
                     Full-time
                     •
-                    $130,000 - $170,00</p>
+                    $130,000 - $170,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_6" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Build enterprise applications with JavaScript and modern frameworks. We offer competitive
@@ -237,8 +237,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_6" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_6" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -260,7 +260,7 @@
                     •
                     $120,000 - $160,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_7" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                     Join our fast-growing startup and work on our core platform. Experience with Node.js and React
@@ -268,8 +268,8 @@
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_7" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_7" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
@@ -291,20 +291,21 @@
                     •
                     $130,000 - $175,000</p>
                 <br />
-                <button class="btn btn-outline bg-gray-300">Not Applied</button>
+                <button id="applied_button_8" class="btn btn-outline bg-gray-300">Not Applied</button>
 
                 <p class="text-gray-600">
                    We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
                 </p>
                 <br />
                 <div>
-                    <button class="btn btn-outline btn-success">INTERVIEW</button>
-                    <button class="btn btn-outline btn-error">REJECTED</button>
+                    <button id="interview_8" class="btn btn-outline btn-success">INTERVIEW</button>
+                    <button id="rejected_8" class="btn btn-outline btn-error">REJECTED</button>
                 </div>
             </div>
         </div>
 
     </section>
 </body>
-
+    <script src="scripts/app.js"></script>
+    <script src="scripts/machine.js"></script>
 </html>
