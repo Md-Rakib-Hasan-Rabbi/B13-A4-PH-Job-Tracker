@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,12 +57,18 @@
         </div>
 
         <div class="mt-[24px]">
-            <button class="btn btn-primary w-[80px] h-[32px]">All</button>
-            <button class="btn btn-soft w-[80px] h-[32px]" onclick="showOnly('card-1')">Interview</button>
-            <button class="btn btn-soft w-[80px] h-[32px]">Rejected</button>
+            <button class="btn btn-primary w-[80px] h-[32px]" id="filterAll">
+                All
+            </button>
+            <button class="btn btn-soft w-[80px] h-[32px]" id="filterInterview">
+                Interview
+            </button>
+            <button class="btn btn-soft w-[80px] h-[32px]" id="filterRejected">
+                Rejected
+            </button>
         </div>
         <!-- card--1  -->
-        <div id="card-1" data-status="Not Applied">
+        <div id="card-1" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -75,7 +82,7 @@
                 </div>
                 <p class="text-gray-500">Remote • Full-time • $130,000 - $175,000</p>
                 <br />
-                <button id="applied_button_1" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_1" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -85,10 +92,10 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_1" class="btn btn-outline btn-success">
+                    <button id="interview_1" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_1" class="btn btn-outline btn-error">
+                    <button id="rejected_1" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
@@ -96,7 +103,7 @@
         </div>
         <!-- card --2  -->
 
-        <div id="card-2" data-status="Not Applied">
+        <div id="card-2" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -112,7 +119,7 @@
                     Los Angeles, CA • Part-time • $80,000 - $120,000
                 </p>
                 <br />
-                <button id="applied_button_2" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_2" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -122,10 +129,10 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_2" class="btn btn-outline btn-success">
+                    <button id="interview_2" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_2" class="btn btn-outline btn-error">
+                    <button id="rejected_2" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
@@ -133,7 +140,7 @@
         </div>
         <!-- card--3  -->
 
-        <div id="card-3" data-status="Not Applied">
+        <div id="card-3" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -149,7 +156,7 @@
                     Boston, MA • Full-time • $125,000 - $165,000
                 </p>
                 <br />
-                <button id="applied_button_3" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_3" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -159,17 +166,17 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_3" class="btn btn-outline btn-success">
+                    <button id="interview_3" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_3" class="btn btn-outline btn-error">
+                    <button id="rejected_3" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
             </div>
         </div>
         <!-- card--4  -->
-        <div id="card-4" data-status="Not Applied">
+        <div id="card-4" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -185,7 +192,7 @@
                     Seattle, WA • Full-time • $140,000 - $190,000
                 </p>
                 <br />
-                <button id="applied_button_4" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_4" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -195,17 +202,17 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_4" class="btn btn-outline btn-success">
+                    <button id="interview_4" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_4" class="btn btn-outline btn-error">
+                    <button id="rejected_4" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
             </div>
         </div>
         <!-- card --5  -->
-        <div id="card-5" data-status="Not Applied">
+        <div id="card-5" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -221,7 +228,7 @@
                     Austin, TX • Full-time • $110,000 - $150,000
                 </p>
                 <br />
-                <button id="applied_button_5" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_5" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -232,10 +239,10 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_5" class="btn btn-outline btn-success">
+                    <button id="interview_5" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_5" class="btn btn-outline btn-error">
+                    <button id="rejected_5" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
@@ -243,7 +250,7 @@
         </div>
 
         <!-- card--6 -->
-        <div id="card-6" data-status="Not Applied">
+        <div id="card-6" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -259,7 +266,7 @@
                     New York, NY • Full-time • $130,000 - $170,000
                 </p>
                 <br />
-                <button id="applied_button_6" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_6" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -270,17 +277,17 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_6" class="btn btn-outline btn-success">
+                    <button id="interview_6" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_6" class="btn btn-outline btn-error">
+                    <button id="rejected_6" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
             </div>
         </div>
         <!-- card--7  -->
-        <div id="card-7" data-status="Not Applied">
+        <div id="card-7" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -294,7 +301,7 @@
                 </div>
                 <p class="text-gray-500">Remote • Full-time • $120,000 - $160,000</p>
                 <br />
-                <button id="applied_button_7" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_7" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -305,17 +312,17 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_7" class="btn btn-outline btn-success">
+                    <button id="interview_7" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_7" class="btn btn-outline btn-error">
+                    <button id="rejected_7" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
             </div>
         </div>
         <!-- card--8 -->
-        <div id="card-8" data-status="Not Applied">
+        <div id="card-8" class="card" data-status="Not Applied">
             <div class="bg-gray-100 shadow-sm mt-[16px] rounded-lg p-5">
                 <div class="flex justify-between">
                     <div>
@@ -331,7 +338,7 @@
                     San Francisco, CA • Full-time • $130,000 - $175,000
                 </p>
                 <br />
-                <button id="applied_button_8" class="btn btn-outline bg-gray-300">
+                <button id="applied_button_8" class="btn btn-outline bg-gray-300 status-btn">
                     Not Applied
                 </button>
 
@@ -342,18 +349,26 @@
                 </p>
                 <br />
                 <div>
-                    <button id="interview_8" class="btn btn-outline btn-success">
+                    <button id="interview_8" class="btn btn-outline btn-success interview-btn">
                         INTERVIEW
                     </button>
-                    <button id="rejected_8" class="btn btn-outline btn-error">
+                    <button id="rejected_8" class="btn btn-outline btn-error rejected-btn">
                         REJECTED
                     </button>
                 </div>
+            </div>
+        </div>
+        <div class="flex flex-col items-center mt-[40px]">
+            <div class="no-jobs hidden" id="noJobsSection">
+                <img src="./images/jobs.png" alt="" />
+                <h1 class="font-bold text-lg">No jobs available</h1>
+                <p class="text-gray-500">Check back soon for new job opportunities</p>
             </div>
         </div>
     </section>
 </body>
 <script src="scripts/app.js"></script>
 <script src="scripts/machine.js"></script>
+<script src="scripts/button_filter.js"></script>
 
 </html>
