@@ -2,9 +2,11 @@ function getInnerText(id) {
     const innerText = document.getElementById(id).innerText;
     return innerText;
 }
+
 function updateCount(id, count) {
     document.getElementById(id).innerText = count;
 }
+
 function markInterview(cardId) {
     const interviewCount = Number(getInnerText("interview_count"));
     const rejectedCount = Number(getInnerText("rejected_count"));
@@ -12,23 +14,15 @@ function markInterview(cardId) {
     const btn = document.getElementById(`applied_button_${cardId}`);
     const card = document.getElementById(`card-${cardId}`);
 
-    // if already Interview → do nothing
     if (btn.innerText === "Interview") return;
-
-    // if switching from Rejected → decrease rejected count
     if (btn.innerText === "Rejected") {
         updateCount("rejected_count", rejectedCount - 1);
     }
 
-    // update button style + text
     btn.innerText = "Interview";
     btn.classList.remove("bg-gray-300", "btn-outline", "btn-error");
     btn.classList.add("btn-success", "text-white");
-
-    // increase interview count
     updateCount("interview_count", interviewCount + 1);
-
-    // update card status
     card.dataset.status = "Interview";
 }
 function markRejected(cardId) {
@@ -36,7 +30,7 @@ function markRejected(cardId) {
     const rejectedCount = Number(getInnerText("rejected_count"));
 
     const btn = document.getElementById(`applied_button_${cardId}`);
-    if (btn.innerText !== "Not Applied") return;
+    if (btn.innerText === "Rejected") return;
 
     if (btn.innerText === "Interview") {
         updateCount("interview_count", interviewCount - 1);
@@ -56,7 +50,6 @@ function showOnly(filter) {
     const noJobs = document.getElementById("noJobsSection");
 
     let found = false;
-
     for (let i = 0; i < cards.length; i++) {
         const card = cards[i];
 
@@ -72,8 +65,7 @@ function showOnly(filter) {
             card.classList.add("hidden");
         }
     }
-
-    // show No Jobs only if nothing found
+    
     if (found) {
         noJobs.classList.add("hidden");
     } else {
